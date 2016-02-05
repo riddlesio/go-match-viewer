@@ -13,13 +13,13 @@ _defaults = {
     },
     "field": {
         "cell": {
-            "width": 55,
-            "height": 55,
+            "width": 30,
+            "height": 30,
             "cellmargin": 18
         },
         "margins": {
             "marginleft": 550,
-            "margintop": -70
+            "margintop": 70
         }
     },
     "boxHeight": 630,

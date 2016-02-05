@@ -14,7 +14,7 @@
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="block-2.svg">
+   sodipodi:docname="GoGame-cell-player1.svg">
   <metadata
      id="metadata13">
     <rdf:RDF>
@@ -39,9 +39,9 @@
      inkscape:window-height="1018"
      id="namedview11"
      showgrid="false"
-     inkscape:zoom="9.44"
-     inkscape:cx="-11.54661"
-     inkscape:cy="12.5"
+     inkscape:zoom="17.77"
+     inkscape:cx="1.5378885"
+     inkscape:cy="6.2866962"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -53,10 +53,28 @@
   </defs>
   <title
      id="title7">circle</title>
-  <path
-     class="cls-1"
-     d="M 12.5,9.64 A 2.86,2.86 0 1 1 9.6400003,12.5 2.86,2.86 0 0 1 12.5,9.64 M 12.5,7 A 5.5,5.5 0 1 0 18,12.5 5.5044,5.5044 0 0 0 12.5,7 h 0 z"
-     id="path9"
-     inkscape:connector-curvature="0"
-     style="fill:#ff5552" />
+  <g
+     id="g3770"
+     transform="translate(0.52838443,0.50011556)">
+    <path
+       transform="matrix(0.90553194,0,0,0.90553194,2.1771331,1.3462588)"
+       d="m 21.526682,12.317336 c 0,5.592932 -4.533968,10.1269 -10.1269,10.1269 -5.5929321,0 -10.1268995,-4.533968 -10.1268995,-10.1269 0,-5.5929322 4.5339674,-10.1268996 10.1268995,-10.1268996 5.592932,0 10.1269,4.5339674 10.1269,10.1268996 z"
+       sodipodi:ry="10.1269"
+       sodipodi:rx="10.1269"
+       sodipodi:cy="12.317336"
+       sodipodi:cx="11.399782"
+       id="path2986-7"
+       style="opacity:0.14732145;fill:#1a1a1a;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       transform="matrix(0.90553194,0,0,0.90553194,1.1203643,0.34602761)"
+       d="m 21.526682,12.317336 c 0,5.592932 -4.533968,10.1269 -10.1269,10.1269 -5.5929321,0 -10.1268995,-4.533968 -10.1268995,-10.1269 0,-5.5929322 4.5339674,-10.1268996 10.1268995,-10.1268996 5.592932,0 10.1269,4.5339674 10.1269,10.1268996 z"
+       sodipodi:ry="10.1269"
+       sodipodi:rx="10.1269"
+       sodipodi:cy="12.317336"
+       sodipodi:cx="11.399782"
+       id="path2986"
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+  </g>
 </svg>

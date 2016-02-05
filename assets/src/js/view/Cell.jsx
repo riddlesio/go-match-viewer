@@ -8,51 +8,28 @@
     var Cell;
 
     Cell = createView(function (data) {
+        var { row, column, x, y, width, height, player } = data;
 
-        /**
-         * Data should have the following structure:
-         * {
-         *    x: Number,
-         *    y: Number,
-         *    width: Number,
-         *    height: Number,
-         *    cellType: String
-         * }
-         */
-
-        var { row, column, x, y, width, height, player, active, taken } = data;
-
-        var backgroundClassName = createBackgroundClassName(active, taken);
-        var className = createClassName(player);
+        var backgroundClassName = "active" + 0 + "-taken" + 0;
+        var className = "player" + player;
 
         var id="row" + row + "col" + column;
 
         return (
             <g
             key="key"
-            className="TicTacToeGame-cell" >
+            className="GoGame-cell" >
                  <g id={ id } dangerouslySetInnerHTML={{
-                     __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#TicTacToeGame-cellbackground-${ backgroundClassName }" />`
+                     __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#GoGame-cellbackground" />`
                  }} />
                  <g id={ id } dangerouslySetInnerHTML={{
-                     __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#TicTacToeGame-cell-${ className }" />`
+                     __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#GoGame-cell-${ className }" />`
                  }} />
             </g>
          );
     });
 
     // Private functions
-
-    /**
-     * Creates a className string based on the passed cellType
-     * @param  {String} cellType A value from enum/CellType
-     * @return {String}
-     */
-    function createBackgroundClassName (active, taken) {
-        var name = "active" + active + "-taken" + taken;
-        return name;
-       
-    }
 
     /**
      * Creates a className string based on the passed cellType

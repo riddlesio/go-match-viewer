@@ -7,15 +7,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="cross"
-   viewBox="0 0 24.99 24.99"
+   id="Layer_2"
+   data-name="Layer 2"
+   viewBox="0 0 25 25"
    version="1.1"
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="block-1.svg">
+   sodipodi:docname="GoGame-cell-player2.svg">
   <metadata
-     id="metadata3003">
+     id="metadata13">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -36,42 +37,40 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1018"
-     id="namedview3001"
+     id="namedview11"
      showgrid="false"
-     inkscape:zoom="9.4437775"
-     inkscape:cx="-11.541992"
-     inkscape:cy="12.495"
+     inkscape:zoom="17.77"
+     inkscape:cx="1.5378885"
+     inkscape:cy="6.2866962"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="cross" />
+     inkscape:current-layer="Layer_2" />
   <defs
-     id="defs2991">
+     id="defs3">
     <style
-       id="style2993">.cls-1{fill:#6aa2fe;}</style>
+       id="style5">.cls-1{fill:#ff5552;}</style>
   </defs>
   <title
-     id="title2995">cross</title>
-  <g
-     id="g3005"
-     transform="matrix(0.44014993,0,0,0.43997388,6.9980404,6.9980392)">
-    <rect
-       id="rect2997"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-5.19,12.5)"
-       height="29.34"
-       width="6"
-       y="-2.1700001"
-       x="9.5"
-       class="cls-1"
-       style="fill:#6aa2fe" />
-    <rect
-       id="rect2999"
-       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,12.49,-5.19)"
-       height="29.34"
-       width="6"
-       y="-2.1700001"
-       x="9.5"
-       class="cls-1"
-       style="fill:#6aa2fe" />
-  </g>
+     id="title7">circle</title>
+  <path
+     sodipodi:type="arc"
+     style="opacity:0.14732145;fill:#1a1a1a;fill-opacity:1;stroke:none"
+     id="path2986-7"
+     sodipodi:cx="11.399782"
+     sodipodi:cy="12.317336"
+     sodipodi:rx="10.1269"
+     sodipodi:ry="10.1269"
+     d="m 21.526682,12.317336 a 10.1269,10.1269 0 1 1 -20.2537995,0 10.1269,10.1269 0 1 1 20.2537995,0 z"
+     transform="matrix(0.90553194,0,0,0.90553194,2.7055175,1.8463744)" />
+  <path
+     sodipodi:type="arc"
+     style="fill:#f9f9f9;fill-opacity:1;stroke:none"
+     id="path2986"
+     sodipodi:cx="11.399782"
+     sodipodi:cy="12.317336"
+     sodipodi:rx="10.1269"
+     sodipodi:ry="10.1269"
+     d="m 21.526682,12.317336 a 10.1269,10.1269 0 1 1 -20.2537995,0 10.1269,10.1269 0 1 1 20.2537995,0 z"
+     transform="matrix(0.90553194,0,0,0.90553194,1.6487487,0.84614317)" />
 </svg>

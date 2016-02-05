@@ -29,35 +29,14 @@
         return (
             <svg className="TicTacToeGame" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
                 <defs>
-                    <symbol id="TicTacToeGame-cell-player1" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cell-player1.svg" />`
+                    <symbol id="GoGame-cell-player1" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/GoGame-cell-player1.svg" />`
                     }} />
-                    <symbol id="TicTacToeGame-cell-player2" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cell-player2.svg" />`
+                    <symbol id="GoGame-cell-player2" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/GoGame-cell-player2.svg" />`
                     }} />
-                    <symbol id="TicTacToeGame-cellbackground-active0-taken0" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken0.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active1-taken0" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active1-taken0.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active2-taken0" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active2-taken0.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active0-taken1" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken1.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active0-taken2" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken2.svg" />`
-                    }} />
-                    <symbol id="round-past" dangerouslySetInnerHTML={{
-                        __html: `<image width="30" height="30" xlink:href="./img/round-past.svg" />`
-                    }} />
-                    <symbol id="round-future" dangerouslySetInnerHTML={{
-                        __html: `<image width="30" height="30" xlink:href="./img/round-future.svg" />`
-                    }} />
-                    <symbol id="round-current" dangerouslySetInnerHTML={{
-                        __html: `<image width="30" height="30" xlink:href="./img/round-current.svg" />`
+                    <symbol id="GoGame-cellbackground" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/GoGame-cellbackground.svg" />`
                     }} />
                     <symbol id="TicTacToeGame-avatar1" dangerouslySetInnerHTML={{
                         __html: `<image width="120" height="120" xlink:href="http://gravatar.com/avatar/${ players.emailHash[0] }?s=100&amp;d=mm" />`
