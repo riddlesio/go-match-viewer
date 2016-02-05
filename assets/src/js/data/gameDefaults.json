@@ -1,0 +1,26 @@
+_defaults = {
+    "colors": {
+        "players": {
+            "0": "rgb(192, 59, 43)",
+            "1": "rgb(40, 128, 186)"
+        },
+    },
+    "player": {
+        "canvas": {
+            "width": 1200,
+            "height": 705
+        }
+    },
+    "field": {
+        "cell": {
+            "width": 55,
+            "height": 55,
+            "cellmargin": 18
+        },
+        "margins": {
+            "marginleft": 550,
+            "margintop": -70
+        }
+    },
+    "boxHeight": 630,
+};

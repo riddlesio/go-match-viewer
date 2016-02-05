@@ -1,0 +1,140 @@
+html {
+	font-size: 62.5%;
+}
+
+.TicTacToeGame {
+	
+}
+
+.TicTacToeGame-overlayBackground {
+	width: 100%;
+	height: 100%;
+
+	stroke: none;
+	opacity: 0.4;
+	fill: black;
+}
+
+.TicTacToeGame-overlayMessage {
+	text-anchor: middle;
+	font-family: Montserrat;
+	font-size: 3.5rem;
+	fill: #ffffff;
+}
+
+.TicTacToeGame-illegalMove {
+	text-anchor: middle;
+	font-family: Montserrat;
+	font-size: 2.5rem;
+	fill: #6ca3ff;
+}
+
+.TicTacToeGame-playerInfo {
+	fill: #6ca3ff;
+	font-family: Montserrat;
+	font-size: 2.5rem;
+}
+
+.TicTacToeGame-playerName {
+	font-family: Montserrat;
+	text-anchor: middle;
+	font-size: 2.0rem;
+}
+
+.TicTacToeGame-playerName.active {
+	font-weight: bold;
+    font-size: 2.1rem;
+}
+
+.TicTacToeGame-playerFields {
+	font-family: Montserrat;
+	text-anchor: middle;
+	font-size: 4.0rem;
+}
+
+.TicTacToeGame-rounds {
+	font-family: Montserrat;
+	font-size: 1.9rem;
+	fill: #fec278;
+}
+
+.TicTacToeGame-player1Color {
+	fill: #fe6f69;
+}
+
+.TicTacToeGame-player2Color {
+	fill: #69a2fc;
+}
+
+.TicTacToeGame-playerInfo.TicTacToeGame-playerMove {
+	text-anchor: middle;
+	font-size: 2rem;
+}
+
+.TicTacToeGame-playerMove-illegal {
+	fill: rgb(250, 167, 25);
+}
+
+.TicTacToeGame-playerInfo.TicTacToeGame-nextShape {
+	font-size: 3.0rem;
+}
+
+.TicTacToeGame-grid-background {
+	fill: rgb(32, 45, 63);
+	stroke: rgb(10, 18, 29);
+	stroke-width: 5px;
+}
+
+.TicTacToeGame-playerName-background {
+	fill: none;
+	stroke: rgb(10, 18, 29);
+	stroke-width: 5px;
+}
+
+.TicTacToeGame-cell {
+	stroke: none;
+	// stroke-width: 1px;
+}
+
+.TicTacToeGame-cell--player1 {
+	fill: #c91b3c;
+}
+.TicTacToeGame-cell--player2 {
+	fill: #1b60c9;
+}
+
+.TicTacToeGame-cell {
+  transform: translateY(150px);
+  animation: popup 0s 6.5s ease infinite;
+}
+@keyframes popup {
+  0% {
+    transform: translateY(150px);
+  }
+  34% {
+    transform: translateY(20px);
+  }
+  37% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+.round-future, .round-past, .round-current {
+	fill: #1b60c9;
+	font-family: Montserrat;
+	font-size: 1.2rem;
+	text-anchor: middle;
+}
+
+.round-current {
+	fill: #1f2225;
+}
+.round-past {
+	fill: #fec278;
+}
+.round-future {
+	fill: #8a8a8a;
+}
