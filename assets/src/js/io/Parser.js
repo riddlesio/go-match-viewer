@@ -40,7 +40,7 @@
 
             return _.map(data.states, function (state) {
 
-                var { move, column, winner, field, illegalMove, player } = state;
+                var { move, column, winner, field, illegalMove, player, player1stonestaken, player2stonestaken } = state;
 
                 if (winner) {
                     if (winner != "none") {
@@ -48,13 +48,15 @@
                     }
                 }
 
-
+console.log(player1stonestaken);
                 return {
                     move,
                     column,
                     winner,
                     illegalMove,
                     player,
+                    player1stonestaken,
+                    player2stonestaken,
                     cells: _.chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {

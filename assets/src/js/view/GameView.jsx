@@ -12,7 +12,7 @@
     GameView = createView('GameView', function (props) {
         
         var { state, settings } = props,
-            { winner, illegalMove, player } = state,
+            { winner, illegalMove, player, player1stonestaken, player2stonestaken } = state,
             { players }         = settings,
             player1class        = "", 
             player2class        = "",
@@ -63,6 +63,14 @@
                     y={ "235" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player2Color" + player2class }>{ players.names[1] }</text>
 
+                <text
+                    x={ "158" }
+                    y={ "265" }
+                    className={"TicTacToeGame-playerName TicTacToeGame-player2Color" + player1class }>{ player1stonestaken }</text>
+                <text
+                    x={ "410" }
+                    y={ "265" }
+                    className={"TicTacToeGame-playerName TicTacToeGame-player1Color" + player2class }>{ player2stonestaken }</text>
 
                 <text x="50%" y="60" className={"TicTacToeGame-illegalMove" + illegalMoveClass }>{ illegalMove }</text>
                 <Overlay winner={ winner } />
