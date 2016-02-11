@@ -47,8 +47,6 @@
                         winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
                     }
                 }
-
-console.log(player1stonestaken);
                 return {
                     move,
                     column,
