@@ -2,11 +2,11 @@ html {
 	font-size: 62.5%;
 }
 
-.TicTacToeGame {
+.GoGame {
 	
 }
 
-.TicTacToeGame-overlayBackground {
+.GoGame-overlayBackground {
 	width: 100%;
 	height: 100%;
 
@@ -15,95 +15,95 @@ html {
 	fill: black;
 }
 
-.TicTacToeGame-overlayMessage {
+.GoGame-overlayMessage {
 	text-anchor: middle;
 	font-family: Montserrat;
 	font-size: 3.5rem;
 	fill: #ffffff;
 }
 
-.TicTacToeGame-illegalMove {
+.GoGame-illegalMove {
 	text-anchor: middle;
 	font-family: Montserrat;
 	font-size: 2.5rem;
 	fill: #6ca3ff;
 }
 
-.TicTacToeGame-playerInfo {
+.GoGame-playerInfo {
 	fill: #6ca3ff;
 	font-family: Montserrat;
 	font-size: 2.5rem;
 }
 
-.TicTacToeGame-playerName {
+.GoGame-playerName {
 	font-family: Montserrat;
 	text-anchor: middle;
 	font-size: 2.0rem;
 }
 
-.TicTacToeGame-playerName.active {
+.GoGame-playerName.active {
 	font-weight: bold;
     font-size: 2.1rem;
 }
 
-.TicTacToeGame-playerFields {
+.GoGame-playerFields {
 	font-family: Montserrat;
 	text-anchor: middle;
 	font-size: 4.0rem;
 }
 
-.TicTacToeGame-rounds {
+.GoGame-rounds {
 	font-family: Montserrat;
 	font-size: 1.9rem;
 	fill: #fec278;
 }
 
-.TicTacToeGame-player1Color {
-	fill: #1a1a1a;
+.GoGame-player1Color {
+	fill: #2ba9fa;
 }
 
-.TicTacToeGame-player2Color {
-	fill: #f9f9f9;
+.GoGame-player2Color {
+	fill: #fb4f50;
 }
 
-.TicTacToeGame-playerInfo.TicTacToeGame-playerMove {
+.GoGame-playerInfo.GoGame-playerMove {
 	text-anchor: middle;
 	font-size: 2rem;
 }
 
-.TicTacToeGame-playerMove-illegal {
+.GoGame-playerMove-illegal {
 	fill: rgb(250, 167, 25);
 }
 
-.TicTacToeGame-playerInfo.TicTacToeGame-nextShape {
+.GoGame-playerInfo.GoGame-nextShape {
 	font-size: 3.0rem;
 }
 
-.TicTacToeGame-grid-background {
+.GoGame-grid-background {
 	fill: rgb(32, 45, 63);
 	stroke: rgb(10, 18, 29);
 	stroke-width: 5px;
 }
 
-.TicTacToeGame-playerName-background {
+.GoGame-playerName-background {
 	fill: none;
 	stroke: rgb(10, 18, 29);
 	stroke-width: 5px;
 }
 
-.TicTacToeGame-cell {
+.GoGame-cell {
 	stroke: none;
 	// stroke-width: 1px;
 }
 
-.TicTacToeGame-cell--player1 {
+.GoGame-cell--player1 {
 	fill: #c91b3c;
 }
-.TicTacToeGame-cell--player2 {
+.GoGame-cell--player2 {
 	fill: #1b60c9;
 }
 
-.TicTacToeGame-cell {
+.GoGame-cell {
   transform: translateY(150px);
   animation: popup 0s 6.5s ease infinite;
 }
