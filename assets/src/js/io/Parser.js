@@ -40,7 +40,7 @@
 
             return _.map(data.states, function (state) {
 
-                var { move, column, winner, field, illegalMove, player, player1stonestaken, player2stonestaken, player1score, player2score } = state;
+                var { move, column, winner, field, illegalMove, player, player1stones, player2stones, player1stonestaken, player2stonestaken, player1score, player2score } = state;
 
                 if (winner) {
                     if (winner != "none") {
@@ -53,6 +53,8 @@
                     winner,
                     illegalMove,
                     player,
+                    player1stones,
+                    player2stones,
                     player1stonestaken,
                     player2stonestaken,
                     player1score,
