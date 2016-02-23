@@ -28,6 +28,8 @@
 
         player1score = "Score: " + player1score;
         player2score = "Score: " + player2score;
+        player1stonestaken = "x " + player1stonestaken
+        player2stonestaken = "x " + player2stonestaken
         return (
             <svg className="GoGame" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
                 <defs>
@@ -74,14 +76,31 @@
                     y={ "215" }
                     className={"GoGame-playerName GoGame-player2Color" + player2class }>{ players.names[1] }</text>
 
+                 <g dangerouslySetInnerHTML={{
+                     __html: `<use x="80" y="235" width="60" height="60" xlink:href="#GoGame-cell-player2" />`
+                 }} />
+
+                 <g dangerouslySetInnerHTML={{
+                     __html: `<use x="1020" y="235" width="60" height="60" xlink:href="#GoGame-cell-player1" />`
+                 }} />
+
+                <text
+                    x={ "135" }
+                    y={ "255" }
+                    className={"GoGame-playerName GoGame-player1Color" }>{ player1stonestaken }</text>
+                <text
+                    x={ "1075" }
+                    y={ "255" }
+                    className={"GoGame-playerName GoGame-player2Color" }>{ player2stonestaken }</text>
+
                 <text
                     x={ "130" }
                     y={ "285" }
-                    className={"GoGame-playerName GoGame-player1Color" + player1class }>{ player1score }</text>
+                    className={"GoGame-playerName GoGame-player1Color" }>{ player1score }</text>
                 <text
                     x={ "1070" }
                     y={ "285" }
-                    className={"GoGame-playerName GoGame-player2Color" + player2class }>{ player2score }</text>
+                    className={"GoGame-playerName GoGame-player2Color" }>{ player2score }</text>
 
                 <text x="50%" y="60" className={"GoGame-illegalMove" + illegalMoveClass }>{ illegalMove }</text>
                 <Overlay winner={ winner } />
