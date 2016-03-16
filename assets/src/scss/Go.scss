@@ -1,0 +1,70 @@
+html {
+    font-size: 62.5%;
+}
+
+.GoGame-player1Color {
+    fill: rgb(43, 169, 250);
+}
+.GoGame-player2Color {
+    fill: rgb(251, 79, 80);
+}
+.GoGame-player1StrokeColor {
+    stroke: rgb(43, 169, 250);
+}
+.GoGame-player2StrokeColor {
+    stroke: rgb(251, 79, 80);
+}
+
+.GoGame-playerName,
+.GoGame-playerScore,
+.GoGame-playerScoreBig,
+.GoGame-playerLabel,
+.GoGame-overlayMessage,
+.GoGame-illegalMove,
+.GoGame-playerIndicator {
+    text-anchor: middle;
+    font-family: Montserrat;
+}
+
+.GoGame-playerName {
+    font-size: 2.2rem;
+    font-family: Montserrat;
+    text-anchor: middle;
+}
+
+.GoGame-panel {
+    fill-opacity: 0.15;
+    stroke-width: 4px;
+}
+
+.GoGame-playerScoreBig {
+    font-size: 3.5rem;
+}
+.GoGame-playerScore {
+    font-size: 2.0rem;
+}
+.GoGame-playerStonesCount,
+.GoGame-round {
+    font-family: Montserrat;
+    font-size: 1.7rem;
+}
+.GoGame-playerLabel {
+    font-size: 1.5rem;
+}
+
+.GoGame-round {
+    fill: white;
+}
+
+.GoGame-overlayBackground {
+    opacity: 0.5;
+}
+.GoGame-overlayMessage {
+    fill: white;
+    font-size: 4.0rem;
+}
+
+.GoGame-illegalMove {
+    font-size: 2.5rem;
+}
+

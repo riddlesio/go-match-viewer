@@ -33,41 +33,39 @@
 
             // create initial empty board state
             initialState = _.cloneDeep(data.states[0]);
-            initialState.field = initialState.field.replace(/4|8/g, '0');
             initialState.player = -1;
-            initialState.move = -1;
+            initialState.round = 0;
+            initialState.field = initialState.field.replace(/1|2/g, '0');
+            initialState.players[0].score = 0;
+            initialState.players[0].stones = 0;
             data.states.unshift(initialState);
+
+            data.states;
 
             return _.map(data.states, function (state) {
 
-                var { move, column, winner, field, illegalMove, player, player1stones, player2stones, player1stonestaken, player2stonestaken, player1score, player2score } = state;
+                var { round, column, winner, field, illegalMove, player, players } = state;
 
-                if (winner) {
-                    if (winner != "none") {
-                        winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
-                    }
+                if (winner && winner != "none") {
+                    winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
                 }
                 return {
-                    move,
+                    round,
                     column,
                     winner,
                     illegalMove,
                     player,
-                    player1stones,
-                    player2stones,
-                    player1stonestaken,
-                    player2stonestaken,
-                    player1score,
-                    player2score,
+                    players,
                     cells: _.chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {
-                            var player = cellType;
-                            var row     = Math.floor(index / 19),
+                            var player = cellType,
+                                row     = Math.floor(index / 19),
                                 column  = index % 19,
                                 x       = column * width + marginleft,
-                                y       = row * height + margintop;
-                            return { row, column, x, y, width, height, player};
+                                y       = row * height + margintop,
+                                key     = row + '-' + column;
+                            return { key, row, column, x, y, width, height, player};
                         })
                         .value()
                 };

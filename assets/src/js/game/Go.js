@@ -12,17 +12,17 @@
 
         _defaults           = require('../data/gameDefaults.json');
 
-    var TicTacToe;
+    var Go;
 
     /**
-     * TicTacToe class
+     * Go class
      * @constructor
      */
-    TicTacToe = AIGames.createGame({
+    Go = AIGames.createGame({
 
         /**
          * TicTacToe construct function
-         * Automatically executed when instantiating the TicTacToe class
+         * Automatically executed when instantiating the Go class
          * @param  {Object} options
          */
         construct: function (options) {
@@ -52,8 +52,6 @@
                 settings,
                 playernames,
                 states,
-                // Use self where this is used more than once
-                // "self" can be shortened by the minifier unlike "this"
                 self = this;
 
             currentState    = 0;
@@ -123,5 +121,5 @@
         PlaybackEvent.off(PlaybackEvent.FAST_BACKWARD, context.fastBackward, context);
     }
 
-    module.exports = TicTacToe;
+    module.exports = Go;
 }());
