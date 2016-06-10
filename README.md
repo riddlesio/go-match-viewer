@@ -28,6 +28,11 @@ To compile for development, run the following command:
 npm run dev-build
 ```
 
+To compile for development with local data, run the following command:
+```
+npm run build-aigames
+```
+
 To compile for production, run the following command:
 
 ```
