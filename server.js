@@ -1,52 +1,45 @@
-var fs 			= require('fs'),
-	http 		= require('http'),
-	server,
-	publicDir 	= './web/';
+const fs          = require('fs');
+const koa         = require('koa');
+const body        = require('koa-body');
+const serve       = require('koa-static');
+const router      = require('koa-router')();
+const publicDir   = './web/';
 
-server = http.createServer(function (request, response) {
+const app = koa();
 
-	// Serve file directly if exists
-	fs.readFile([publicDir, request.url].join(''), function (error, content) {
-		
-		if (!error) {
-			if (request.url.indexOf('.svg') > -1) {
- 				response.writeHead(200, { 'Content-Type': 'image/svg+xml'});
- 			} else {
- 				response.writeHead(200);
- 			}
-			response.end(content, 'utf-8');
+app.use(serve('./web'));
+app.use(body());
 
-			return;
-		}
+router.get('/data', function *(next) {
 
-		if (request.url.indexOf('/data') !== -1) {
-			fs.readFile('./assets/src/js/data/dummyData.json', function (error, content) {
+	try {
+		this.body = fs.readFileSync('./src/js/data/dummyData.json');
+		this.contentType = 'application/json';
+	} catch (error) {
+		this.body = error.message;
+		this.status = 500;
+	}
 
-				if (!error) {
-					response.writeHead(200, { 'Content-Type': 'application/json' });
-					response.end(content, 'utf-8');
+	// this.body = JSON.stringify({
+	//     settings: {},
+	//     states: getStates(10)
+	// });
 
-					return;			
-				}
 
-				response.writeHead(500);
-				response.end();
-			});
-		} else {
-			// else serve index.html
-			fs.readFile([publicDir, 'index.html'].join(''), function (error, content) {
+	yield next;
+});
 
-				if (!error) {
-					response.writeHead(200, { 'Content-Type': 'text/html' });
-					response.end(content, 'utf-8');
+// function getStates (amount) {
+//
+//     return Array.from({ length: amount }, (_, index) => ({
+//         data: index,
+//         descriptor: {
+//             value: `State ${index}`,
+//             type: 1 === Math.round(Math.random()) ? 'error' : 'message'
+//         }
+//     }));
+// }
 
-					return;
-				}
+app.use(router.routes());
 
-				response.writeHead(500);
-				response.end();
-			});
-		}
-	});
-}).listen(8989);
-console.log("Server started 8989");
+app.listen(8989);

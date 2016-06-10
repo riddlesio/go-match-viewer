@@ -63,11 +63,11 @@
                  */
                 getState: function () {
                     return state;
-                }
+                },
             };
 
             _.extend(context, mixin);
-        }
+        },
     };
 
     module.exports = StateMixin;
