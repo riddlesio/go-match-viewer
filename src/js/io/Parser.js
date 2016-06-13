@@ -1,20 +1,17 @@
 const _ = require('lodash');
 
-/**
- * Singleton containing several utility functions for data parsing
- * @type {Object}
- */
-
 function parsePlayerNames(playerData, settings) {
 
-    let names = playerData.names;
-    let emailHash = playerData.emailHash;
+    settings.players.names = [];
+    settings.players.emailHash = [];
 
-    names = names ? names.split(',') : ['', ''];
-    emailHash = emailHash ? emailHash.split(',') : ['', ''];
+    playerData.forEach((player) => {
+        const name = player.name ? player.name : '';
+        const hash = player.emailHash ? player.emailHash : '';
 
-    settings.players.names = names;
-    settings.players.emailHash = emailHash;
+        settings.players.names.push(name);
+        settings.players.emailHash.push(hash);
+    });
 
     return settings;
 }

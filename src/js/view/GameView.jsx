@@ -20,7 +20,7 @@ const GameView = createView('GameView', function (props) {
         illegalMoveClass = ' GoGame-player2Color';
     }
 
-    players.map(function(p, index) {
+    players.map(function (p, index) {
         p.name = playerSettings.names[index];
         p.activePlayer = player;
         p.id = index + 1;
