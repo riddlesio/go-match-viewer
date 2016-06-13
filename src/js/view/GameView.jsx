@@ -1,10 +1,10 @@
-const
-    _           = require('lodash'),
-    React       = require('react'),
-    createView  = require('omniscient'),
-    FieldView   = require('./FieldView.jsx'),
-    PlayerView  = require('./PlayerView.jsx'),
-    Overlay     = require('./Overlay.jsx').jsx;
+import React from 'react';
+import createView from 'omniscient';
+import _ from 'lodash';
+
+const FieldView = require('./FieldView.jsx');
+const PlayerView = require('./PlayerView.jsx');
+const Overlay = require('./Overlay.jsx');
 
 const GameView = createView('GameView', function (props) {
 

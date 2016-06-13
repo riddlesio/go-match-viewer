@@ -47,8 +47,6 @@ const MatchViewer = createGame({
 
     handleData: function (data) {
 
-        // console.log(data);
-
         let settings;
         const currentState = 0;
         const matchData = data.matchData;
@@ -58,13 +56,10 @@ const MatchViewer = createGame({
         settings = _.merge(this.getDefaults(), settings);
         settings = parsePlayerNames(playerData, settings);
 
-        console.log(settings);
-
         const states = parseStates(matchData, settings);
 
         this.settings = settings;
         this.states   = states;
-        this.playernames = settings;
 
         this.triggerStateChange(currentState);
         this.play();
