@@ -10,23 +10,22 @@ const app = koa();
 app.use(serve('./web'));
 app.use(body());
 
-router.get('/data', function *(next) {
+router.get('/data', function * (next) {
 
-	try {
-		this.body = fs.readFileSync('./src/js/data/dummyData.json');
-		this.contentType = 'application/json';
-	} catch (error) {
-		this.body = error.message;
-		this.status = 500;
-	}
+    try {
+        this.body = fs.readFileSync('./src/js/data/dummyData.json');
+        this.contentType = 'application/json';
+    } catch (error) {
+        this.body = error.message;
+        this.status = 500;
+    }
 
-	// this.body = JSON.stringify({
-	//     settings: {},
-	//     states: getStates(10)
-	// });
+    // this.body = JSON.stringify({
+    //     settings: {},
+    //     states: getStates(10)
+    // });
 
-
-	yield next;
+    yield next;
 });
 
 // function getStates (amount) {
