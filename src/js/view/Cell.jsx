@@ -1,26 +1,23 @@
-(function (undefined) {
+import React      from 'react';
+import createView from 'omniscient';
 
-    const
-        React      = require('react'),
-        createView = require('omniscient'),
-        classNames = require('classnames');
+const Cell = createView(function (data) {
 
-    var Cell;
+    const { row, column, x, y, width, height, player } = data;
+    const className = `player${player}`;
+    const key       = `row${row}col${column}`;
 
-    Cell = createView(function (data) {
-        var { row, column, x, y, width, height, player } = data,
-            className = "player" + player,
-            id = "row" + row + "col" + column;
+    return (
+        <g key={ key } className="GoGame-cell" >
+            <use
+                x={ x }
+                y={ y }
+                width={ width }
+                height={ height }
+                xlinkHref={ `#GoGame-cell-${className}` }
+            />
+        </g>
+     );
+});
 
-        return (
-            <g className="GoGame-cell" >
-                 <g id={ id } dangerouslySetInnerHTML={{
-                     __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#GoGame-cell-${ className }" />`
-                 }} />
-            </g>
-         );
-    });
-
-    // Private functions
-    module.exports = Cell;
-}());
+export default Cell;
