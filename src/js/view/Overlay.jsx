@@ -5,16 +5,18 @@ import classNames  from 'classnames';
 const Overlay = createView('Overlay', function (props) {
 
     const { winner } = props;
+
+    console.log(winner);
+
     const cx = classNames({
-        'u-hidden': !winner
+        'u-hidden': !winner,
     });
 
     let message;
 
-    if ('none' === winner) {
+    if (!winner) {
         message = 'The game is a draw';
-    }
-    else {
+    } else {
         message = `${winner} won the game!`;
     }
 

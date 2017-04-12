@@ -1,20 +1,30 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'),
+    local('Montserrat-Regular'),
+    url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 html {
     font-size: 62.5%;
 }
 
-.GoGame-player1Color {
+.GoGame-player0Color {
     fill: rgb(43, 169, 250);
 }
 
-.GoGame-player2Color {
+.GoGame-player1Color {
     fill: rgb(251, 79, 80);
 }
 
-.GoGame-player1StrokeColor {
+.GoGame-player0StrokeColor {
     stroke: rgb(43, 169, 250);
 }
 
-.GoGame-player2StrokeColor {
+.GoGame-player1StrokeColor {
     stroke: rgb(251, 79, 80);
 }
 
@@ -26,12 +36,12 @@ html {
 .GoGame-illegalMove,
 .GoGame-playerIndicator {
     text-anchor: middle;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .GoGame-playerName {
     font-size: 2.2rem;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     text-anchor: middle;
 }
 
@@ -50,7 +60,7 @@ html {
 
 .GoGame-playerStonesCount,
 .GoGame-round {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.7rem;
 }
 

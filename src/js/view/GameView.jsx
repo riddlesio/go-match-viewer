@@ -11,19 +11,12 @@ const GameView = component('GameView', function (props) {
     const { winner, illegalMove, player, players, round } = state;
     const playerSettings      = settings.players;
     const colors              = settings.colors.players;
-
-    let illegalMoveClass    = '';
-
-    if (player === 1) {
-        illegalMoveClass = ' GoGame-player1Color';
-    } else if (player === 2) {
-        illegalMoveClass = ' GoGame-player2Color';
-    }
+    const illegalMoveClass    = player === 0 || player === 1 ? ` GoGame-player${player}Color` : '';
 
     players.map((p, index) => {
         p.name = playerSettings.names[index];
         p.activePlayer = player;
-        p.id = index + 1;
+        p.id = index;
         p.color = colors[p.id];
         p.key = 'playerview-' + p.id;
 
@@ -222,32 +215,32 @@ const GameView = component('GameView', function (props) {
                         />
                     </g>
                 </symbol>
-                <symbol id="GoGame-cell-player1" viewBox="0 0 37 37">
+                <symbol id="GoGame-cell-player0" viewBox="0 0 37 37">
                     <g>
                         <circle fill="#4458cc" cx="18.62" cy="18" r="12.5"/>
                         <circle fill="#6aa2fe" cx="18.5" cy="16" r="12.5"/>
                     </g>
                 </symbol>
-                <symbol id="GoGame-cell-player2" viewBox="0 0 37 37">
+                <symbol id="GoGame-cell-player1" viewBox="0 0 37 37">
                     <g>
                         <circle fill="#cc4242" cx="17.71" cy="17.5" r="12.5"/>
                         <circle fill="#ff5552" cx="17.42" cy="15.5" r="12.5"/>
                     </g>
                 </symbol>
-                <symbol id="GoGame-avatar1" dangerouslySetInnerHTML={{
+                <symbol id="GoGame-avatar0" dangerouslySetInnerHTML={{
                     __html: `
                     <image width="120" height="120" clip-path="url(#roundedclip)"
                         xlink:href="http://gravatar.com/avatar/${playerSettings.emailHash[0]}?s=100&amp;d=mm" />
                     <rect width="120" height="120" rx="10" x="1" y="1"
-                        style="stroke:${colors[1]};stroke-width:4;fill-opacity:0;stroke-opacity:1" />
+                        style="stroke:${colors[0]};stroke-width:4;fill-opacity:0;stroke-opacity:1" />
                     `
                 }} />
-                <symbol id="GoGame-avatar2" dangerouslySetInnerHTML={{
+                <symbol id="GoGame-avatar1" dangerouslySetInnerHTML={{
                     __html: `
                     <image width="120" height="120" clip-path="url(#roundedclip)"
                         xlink:href="http://gravatar.com/avatar/${ playerSettings.emailHash[1] }?s=100&amp;d=mm" />
                     <rect width="120" height="120" rx="10" x="1" y="1"
-                        style="stroke:${colors[2]};stroke-width:4;fill-opacity:0;stroke-opacity:1" />
+                        style="stroke:${colors[1]};stroke-width:4;fill-opacity:0;stroke-opacity:1" />
                     `
                 }} />
                 <clipPath id="roundedclip">

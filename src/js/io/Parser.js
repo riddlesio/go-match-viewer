@@ -18,51 +18,54 @@ function parsePlayerNames(playerData, settings) {
 
 function parseStates(data, settings) {
 
-    let initialState;
-
-    const field                     = settings.field;
+    const { field, players }        = settings;
     const { width, height }         = field.cell;
     const { margintop, marginleft } = field.margins;
+    const { winner }                = data;
 
     // create initial empty board state
-    initialState = _.cloneDeep(data.states[0]);
-    initialState.player = -1;
-    initialState.round = 0;
-    initialState.field = initialState.field.replace(/1|2/g, '0');
-    initialState.players[0].score = 0;
-    initialState.players[0].stones = 0;
-    data.states.unshift(initialState);
-    data.states;
+    // initialState = _.cloneDeep(data.states[0]);
+    // initialState.player = -1;
+    // initialState.round = 0;
+    // initialState.field = initialState.field.replace(/1|2/g, '.');
+    // initialState.players[0].score = 0;
+    // initialState.players[0].stones = 0;
+    // data.states.unshift(initialState);
 
-    return _.map(data.states, function (state) {
+    const states = data.states.map(state => {
 
-        var { round, column, winner, field, illegalMove, player, players } = state;
-
-        if (winner && winner != 'none') {
-            winner = settings.players.names[parseInt(winner.replace('player', '')) - 1];
-        }
+        const { round, column, field, illegalMove, player, players } = state;
 
         return {
             round,
             column,
-            winner,
             illegalMove,
             player,
             players,
+            winner: null,
             cells: _.chain(field)
                 .thru((string) => string.split(/,|;/))
-                .map(function (cellType, index) {
-                    let player  = cellType;
-                    let row     = Math.floor(index / 19);
-                    let column  = index % 19;
-                    let x       = column * width + marginleft;
-                    let y       = row * height + margintop;
-                    let key     = row + '-' + column;
+                .map((cellType, index) => {
+                    const player  = cellType;
+                    const row     = Math.floor(index / 19);
+                    const column  = index % 19;
+                    const x       = column * width + marginleft;
+                    const y       = row * height + margintop;
+                    const key     = row + '-' + column;
                     return { key, row, column, x, y, width, height, player };
-                })
-                .value(),
+                }).value(),
         };
     });
+
+    return addFinalState(states, winner, players.names);
+}
+
+function addFinalState(states, winner, playerNames) {
+    const lastState = states[states.length - 1];
+    return states.concat([{
+        ...lastState,
+        winner: winner !== null ? playerNames[winner] : null,
+    }]);
 }
 
 export {

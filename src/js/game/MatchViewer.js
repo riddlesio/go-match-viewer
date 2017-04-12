@@ -92,8 +92,6 @@ const MatchViewer = createGame({
  */
 function registerEventListeners(context) {
 
-    console.log(context);
-
     PlaybackEvent.on(PlaybackEvent.PLAY, context.play, context);
     PlaybackEvent.on(PlaybackEvent.PAUSE, context.pause, context);
     PlaybackEvent.on(PlaybackEvent.FORWARD, context.moveForward, context);

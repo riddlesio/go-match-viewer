@@ -5,7 +5,7 @@ const PlayerView = createView('PlayerView', function (props) {
 
     const { activePlayer, score, stones, id, name } = props;
     const activeClass = activePlayer === id ? " active" : "";
-    const posX = id === 1 ? 70 : 1010;
+    const posX = id === 0 ? 70 : 1010;
 
     let { stonestaken } = props;
 
@@ -63,7 +63,7 @@ const PlayerView = createView('PlayerView', function (props) {
                 y="417"
                 width="30"
                 height="30"
-                xlinkHref={ `#GoGame-cell-player${2 - id + 1}` }
+                xlinkHref={ `#GoGame-cell-player${2 - (id + 1)}` }
             />
             <text
                 x={ posX + 65 }
