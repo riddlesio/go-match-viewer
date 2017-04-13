@@ -23,15 +23,6 @@ function parseStates(data, settings) {
     const { margintop, marginleft } = field.margins;
     const { winner }                = data;
 
-    // create initial empty board state
-    // initialState = _.cloneDeep(data.states[0]);
-    // initialState.player = -1;
-    // initialState.round = 0;
-    // initialState.field = initialState.field.replace(/1|2/g, '.');
-    // initialState.players[0].score = 0;
-    // initialState.players[0].stones = 0;
-    // data.states.unshift(initialState);
-
     const states = data.states.map(state => {
 
         const { round, column, field, illegalMove, player, players } = state;
